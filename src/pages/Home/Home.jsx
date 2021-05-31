@@ -16,6 +16,10 @@ class Home extends Component {
         this.setState({searchInput: e.target.value})
     }
 
+    componentDidMount() {
+        console.log(this.props);
+    }
+
     render() {
         return (
             <div className="home">
@@ -57,5 +61,7 @@ class Home extends Component {
 export default connect(state => ({
     player: state.player
 },{
-    IS_PLAYING
+    IS_PLAYING,
+    UN_IS_PLAYING,
+    TOGGLE_PLAYING
 }))(Home)
